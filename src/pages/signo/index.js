@@ -2,37 +2,22 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
 import './index.scss' 
+import {seuSigno} from '../../services';
 
 export default function Signo () {
     const [dia, setDia] = useState(0)
     const [mes, setMes] = useState('')
     const [result, setResult] = useState('')
 
-    function seuSigno () {
-        
-        try {
-        if(mes == 'Setembro' && dia >=23 || mes == 'Outubro' && dia <=22) {
-            setResult('Sim :)')
-        }
-        else if (mes == 'setembro' && dia >=23 || mes == 'outubro' && dia <=22) {
-            setResult('Sim :)')
-        }
-        else if (mes == 'SETEMBRO' && dia >=23 || mes == 'OUTUBRO' && dia <=22) {
-            setResult('Sim :)')
-        }
-        else {
-            setResult('Não :(')
-        }
-        }
-        catch(err){
-            setResult(err.message)
-        }
+    function Calculo () {
+        let x = seuSigno(dia, mes)
+        setResult(x)
     }
 
 
     
     useEffect(() => {
-        seuSigno();
+        Calculo();
     }, [dia, mes])
 
 

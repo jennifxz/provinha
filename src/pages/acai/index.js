@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
 import './index.scss'
+import { calcularAcai } from "../../services";
 
 export default function Acai() {
 
@@ -11,26 +12,8 @@ export default function Acai() {
     const [result, setResult] = useState()
 
     function Calcular() {
-
-        try {
-
-            let total = qtdP * 13.50 + qtdM * 15 + qtdG * 17.50;
-            let desconto = total * desc / 100;
-            let final = total - desconto;
-
-            let msg = 'O valor total é ' + final;
-
-            if (qtdP < 0 || qtdM < 0 || qtdG < 0 || desc < 0) {
-                msg = 'Valor inválido'
-            }
-            
-            setResult(msg)
-        }
-        catch (err) {
-            setResult(err.message)
-        }
-
-       
+        let x = calcularAcai(qtdP, qtdM, qtdG, desc)
+        setResult(x)
     }
 
     useEffect(() => {

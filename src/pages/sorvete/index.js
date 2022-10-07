@@ -1,38 +1,20 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from "react";
 import './index.scss'
+import {calcularGramas} from '../../services';
 
 export default function Sorvete() {
 
     const [gramas, setGramas] = useState(0);
     const [result, setResult] = useState();
 
-    function Calcular () {
-        try{
-        let total = 0;
-        let msg = '';
-
-
-        if(gramas > 1000) {
-            total = (gramas / 100) * 3 
-            msg = 'O total a pagar é R$' + total ;
-        }
-        else if(gramas <= 0 ) {
-            msg = 'Peso inválido'
-        }
-        else{
-            total = (gramas / 100 ) * 3.50
-            msg='O total a pagar é R$' + total;
-        }
-        setResult (msg)
-        }
-        catch(err) {
-            setResult(err.message)
-        }
+    function Calculo() {
+        let x = calcularGramas(gramas)
+        setResult(x)
     }
-
+  
     useEffect(() => {
-        Calcular();
+        Calculo();
 
     }, [gramas])
 
