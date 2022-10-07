@@ -8,8 +8,10 @@ export default function Sorvete() {
     const [result, setResult] = useState();
 
     function Calcular () {
+        try{
         let total = 0;
         let msg = '';
+
 
         if(gramas > 1000) {
             total = (gramas / 100) * 3 
@@ -23,6 +25,10 @@ export default function Sorvete() {
             msg='O total a pagar é R$' + total;
         }
         setResult (msg)
+        }
+        catch(err) {
+            setResult(err.message)
+        }
     }
 
     useEffect(() => {

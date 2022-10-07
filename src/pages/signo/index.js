@@ -10,6 +10,7 @@ export default function Signo () {
 
     function seuSigno () {
         
+        try {
         if(mes == 'Setembro' && dia >=23 || mes == 'Outubro' && dia <=22) {
             setResult('Sim :)')
         }
@@ -21,6 +22,10 @@ export default function Signo () {
         }
         else {
             setResult('Não :(')
+        }
+        }
+        catch(err){
+            setResult(err.message)
         }
     }
 
