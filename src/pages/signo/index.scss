@@ -1,0 +1,41 @@
+.signo {
+    background-color: #1f1f1f;
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+    .link {
+        font-size: 16px;
+        background-color:#cd9564
+         ;
+        text-decoration: none;
+        color: #000;
+        padding:  0.7em ;
+        border-radius: 25px;
+        margin: 2em;
+        
+    }
+
+    h1 {
+        color: #cd9564;
+        
+    }
+
+    label {
+        color: #fff;
+        font-weight: 600;
+    }
+    input {
+        max-width: 500px;
+        margin:1em ;
+        padding: 0.5em;
+        background-color: #cd9564;
+        
+        font-size:16px ;
+        border-radius: 10px;
+        border: none;
+        outline: none;         
+    }
+ }

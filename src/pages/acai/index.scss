@@ -1,0 +1,38 @@
+
+
+.acai {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    color: #fff;
+    background-color: #531068;
+    height: 100vh;
+    input {
+        max-width: 500px;
+        margin:1em ;
+        padding: 0.5em;
+        background-color: #b0c800;
+        
+        font-size:16px ;
+        border-radius: 10px;
+        border: none;
+        outline: none;       
+    }
+
+    label {
+        font-weight: 600;
+    }
+
+    .link {
+        
+        
+        text-decoration: none;
+        background-color: #b0c800;
+        border-radius:20px;
+        padding: 0.7em;
+    }
+
+}
