@@ -24,6 +24,7 @@ export default function Signo () {
         }
     }
 
+    
     useEffect(() => {
         seuSigno();
     }, [dia, mes])
