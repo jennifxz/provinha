@@ -5,7 +5,7 @@ import './index.scss'
 import {seuSigno} from '../../services';
 
 export default function Signo () {
-    const [dia, setDia] = useState(0)
+    const [dia, setDia] = useState()
     const [mes, setMes] = useState('')
     const [result, setResult] = useState('')
 
@@ -24,6 +24,7 @@ export default function Signo () {
     return (
         <main className='signo'>
             <Link className="link" to='/'>Voltar para home</Link>
+            
             <h1>Signo</h1>
 
             <label>Dia</label><input type='number' value={dia} onChange={e => setDia(Number(e.target.value))}/>
@@ -33,7 +34,7 @@ export default function Signo () {
             <h1>É do signo de libra? </h1>
             <h1>{result}</h1>
 
-            <img src='/assets/images/libra-na-amizade.jpg' width={500}/>
+            <img src='/assets/images/libra-na-amizade.jpg' width={300}/>
         </main>
     )
 

@@ -42,6 +42,7 @@ export default function Acai() {
 
 
             <h2>{result}</h2>
+            
         </main>
     )
 

@@ -4,7 +4,7 @@ function calcularGramas (gramas) {
     let msg = '';
 
 
-    if(gramas > 1000) {
+    if(gramas >= 1000) {
         total = (gramas / 100) * 3 
         msg = 'O total a pagar é R$' + total ;
     }
