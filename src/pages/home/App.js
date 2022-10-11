@@ -12,6 +12,13 @@ function Home() {
         <Link to='/signo' className='link' >Signo</Link>
         
         <Link to='/sorvete' className='link'> Sorvete</Link>
+
+        <Link to='/salario' className='link'> Salário</Link>
+        
+        <Link to='/paradas' className='link'>Paradas</Link>
+        
+        <Link to='/febre' className='link'>Febre</Link>
+
         </div>
     </main>
   );
