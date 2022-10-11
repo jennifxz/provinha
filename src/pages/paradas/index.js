@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-
+import "./index.scss"
+import { Link } from "react-router-dom";
 import { Paradas } from "../../services";
 
 export default function ParadasViagem() {
@@ -20,7 +21,9 @@ export default function ParadasViagem() {
 
     return(
         <main>
-            <div>
+            <div className="pag">
+            <Link to='/' className='link' >Voltar para Home</Link>
+
                 <h1>Calcular Paradas</h1>
 
                 <p>Capacidade do tanque <input type="Number" value={capac} onChange={e => setCapac(Number(e.target.value))} /></p>
