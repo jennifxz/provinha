@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import { Orcamento } from '../../services'
 
 export default function OrcamentoFamiliar () {
-    const [gastos, setGastos] = useState(0)
-    const [ganhos, setGanhos] = useState(0)
-    const [result, setResult] = useState('')
+    const [ gastos, setGastos] = useState(0)
+    const [ ganhos, setGanhos] = useState(0)
+    const [ result, setResult] = useState('')
 
     function calcular () {
         let x = Orcamento (ganhos, gastos)
