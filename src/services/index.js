@@ -127,5 +127,47 @@ function Febre(temperatura) {
     }
 }
 
+function Ingressos(inteira, meia, dia, nacional ) {
+    let total = 0;
 
-export { calcularGramas, seuSigno, calcularAcai, SalarioLiq, Paradas, Febre }
+    if(dia == 'Quarta-feira' &&nacional == false ) {
+        total = (inteira + meia) * (28.5 / 2)
+    }
+    else if(nacional == true) {
+        total = (inteira + meia ) * 5
+    }
+    else {
+        total = (inteira * 28.5) + (meia * 28.5 / 2)
+    }
+
+    return total;
+
+
+} 
+
+function Orcamento (ganhos, gastos) {
+    let porcentagem = gastos / ganhos * 100;
+    let msg = '';
+    if(porcentagem <= 20) {
+        msg = 'Parabéns, está gerenciando bem seu orçamento!'
+    }
+    else if ( porcentagem > 20 && porcentagem <= 50) {
+        msg = 'Muito bem, seus gastos não ultrapassam metade dos ganhos!'
+    }
+    else if (porcentagem > 50 && porcentagem <=80) {
+        msg = 'Atenção, melhor conter seus gastos!'
+    }
+    else if (porcentagem > 80 && porcentagem <=100 ) {
+        msg = 'Cuidado, seu orçamento pode ficar comprometido!'
+    }
+    else {
+        msg = 'Orçamento comprometido! Hora de rever seus gastos!'
+    }
+    
+
+    return msg;
+
+}
+
+
+export { calcularGramas, seuSigno, calcularAcai, SalarioLiq, Paradas, Febre, Ingressos, Orcamento }

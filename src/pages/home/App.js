@@ -19,6 +19,10 @@ function Home() {
         
         <Link to='/febre' className='link'>Febre</Link>
 
+        <Link to ='/orcamento' className='link'>Orçamento Familiar</Link>
+
+        <Link to ='/ingresso' className='link'>Ingressos</Link>
+
         </div>
     </main>
   );

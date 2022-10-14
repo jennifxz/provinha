@@ -10,6 +10,8 @@ import Sorvete from './pages/sorvete';
 import SalarioLiquido from './pages/salario';
 import ParadasViagem from './pages/paradas';
 import Febres from './pages/febre';
+import OrcamentoFamiliar from './pages/orcamento';
+import Ingresso from './pages/ingresso';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +25,8 @@ root.render(
             <Route path='/salario' element={<SalarioLiquido />} />
             <Route path='/paradas' element={<ParadasViagem />} />
             <Route path='/febre' element={<Febres />} />
+            <Route path='/orcamento' element={<OrcamentoFamiliar/>} />
+            <Route path='/ingresso' element={<Ingresso/>} />
         </Routes>
     </BrowserRouter>
   </React.StrictMode>
