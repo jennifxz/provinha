@@ -196,23 +196,22 @@ function retangulo(altura, largura) {
     
     let arr = []
 
-    for(let linha = 0; linha < altura; linha++){
-        for(let coluna = 0; coluna < largura; coluna++){
-            arr.push('*') 
-            
-        } 
-        
+    for(let linha = 1; linha <= altura; linha++){
+        arr.push([])
     }
+    for(let i = 1; i <= largura; i++){
+        for(let l = 0; l < altura; l++) {
+            arr[l].push(' *')
+        }
+    }
+
    return arr;
 
-    
 }
 
-let x = retangulo(2, 4)
-console.log(x);
 
 
 
 
 
-export { calcularGramas, seuSigno, calcularAcai, SalarioLiq, Paradas, Febre, Ingressos, Orcamento, contar, linha }
+export { calcularGramas, seuSigno, calcularAcai, SalarioLiq, Paradas, Febre, Ingressos, Orcamento, contar, linha, retangulo }

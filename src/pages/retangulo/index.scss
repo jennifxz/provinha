@@ -1,0 +1,16 @@
+main {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .toBeReplaced {
+        font-size: 0;
+    }
+    
+    .toBeReplaced::before {
+        font-size: 1em;
+        content:'▪'
+    }
+}

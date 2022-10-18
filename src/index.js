@@ -14,6 +14,7 @@ import OrcamentoFamiliar from './pages/orcamento';
 import Ingresso from './pages/ingresso';
 import Contagem from './pages/contar';
 import Linhas from './pages/linha';
+import Forma from './pages/retangulo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -31,6 +32,7 @@ root.render(
             <Route path='/ingresso' element={<Ingresso/>} />
             <Route path='/contar' element={<Contagem/>} />
             <Route path='/linha' element={<Linhas/>} />
+            <Route path='/retangulo' element={<Forma/>} />
         </Routes>
     </BrowserRouter>
   </React.StrictMode>
