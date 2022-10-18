@@ -12,6 +12,8 @@ import ParadasViagem from './pages/paradas';
 import Febres from './pages/febre';
 import OrcamentoFamiliar from './pages/orcamento';
 import Ingresso from './pages/ingresso';
+import Contagem from './pages/contar';
+import Linhas from './pages/linha';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,6 +29,8 @@ root.render(
             <Route path='/febre' element={<Febres />} />
             <Route path='/orcamento' element={<OrcamentoFamiliar/>} />
             <Route path='/ingresso' element={<Ingresso/>} />
+            <Route path='/contar' element={<Contagem/>} />
+            <Route path='/linha' element={<Linhas/>} />
         </Routes>
     </BrowserRouter>
   </React.StrictMode>

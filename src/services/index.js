@@ -170,4 +170,49 @@ function Orcamento (ganhos, gastos) {
 }
 
 
-export { calcularGramas, seuSigno, calcularAcai, SalarioLiq, Paradas, Febre, Ingressos, Orcamento }
+function contar(inicio, fim) {
+    let arr = []
+   
+
+    for(let i = inicio; i <= fim; i++) {
+        arr.push(' '+i)
+            
+    }
+    
+    return arr;
+}
+
+
+
+function linha(limite) {
+    let arr = []
+    for(let i = 1; i <= limite; i++ ) {
+        arr.push(' *')
+    }
+    return arr;    
+}
+
+function retangulo(altura, largura) {
+    
+    let arr = []
+
+    for(let linha = 0; linha < altura; linha++){
+        for(let coluna = 0; coluna < largura; coluna++){
+            arr.push('*') 
+            
+        } 
+        
+    }
+   return arr;
+
+    
+}
+
+let x = retangulo(2, 4)
+console.log(x);
+
+
+
+
+
+export { calcularGramas, seuSigno, calcularAcai, SalarioLiq, Paradas, Febre, Ingressos, Orcamento, contar, linha }
