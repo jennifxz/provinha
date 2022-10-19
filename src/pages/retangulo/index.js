@@ -11,6 +11,7 @@ export default function Forma () {
     function calcular(){
         let x = retangulo(altura, largura)
         setResult(x);
+        console.log(result)
     } 
 
   
@@ -23,9 +24,9 @@ export default function Forma () {
             <p>Largura: <input type='number' value={largura} onChange={e => setLargura(Number(e.target.value))}/></p>
 
             <button onClick={calcular}>Ok</button>
-            <div>
+            <div className='array'>
                 {result.map(item => 
-                    <p className='toBeReplaced'>{item}</p>
+                    <span className='toBeReplaced'>{item}</span>
                 
                 )}
             </div>

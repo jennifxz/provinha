@@ -170,7 +170,7 @@ function Orcamento (ganhos, gastos) {
 }
 
 
-function contar(inicio, fim) {
+function minimor(inicio, fim) {
     let arr = []
    
 
@@ -197,21 +197,37 @@ function retangulo(altura, largura) {
     let arr = []
 
     for(let linha = 1; linha <= altura; linha++){
-        arr.push([])
-    }
-    for(let i = 1; i <= largura; i++){
-        for(let l = 0; l < altura; l++) {
-            arr[l].push(' *')
+        let c = [];
+        for(let i = 1; i <= largura; i++){
+            c.push(' *')
         }
+        arr.push(c)
     }
 
    return arr;
 
 }
 
+function cafe(estudantes, litros, ml ) {
+    let minimo = (estudantes * ml) / 1000;
+    
+    if (minimo < litros) {
+        let x = litros - minimo;
+        let total = x + minimo
+        return total
+    }
+    else if (minimo > litros ) {
+        let excesso = minimo - litros;
+        let ex = minimo - excesso;
+        let total2 = ex + litros
+        return total2
+    }
+    else {
+        return minimo
+    }
+}
 
+let x = cafe(2, 1, 2000) 
+console.log(x)
 
-
-
-
-export { calcularGramas, seuSigno, calcularAcai, SalarioLiq, Paradas, Febre, Ingressos, Orcamento, contar, linha, retangulo }
+export { calcularGramas, seuSigno, calcularAcai, SalarioLiq, Paradas, Febre, Ingressos, Orcamento, minimor, linha, retangulo }
