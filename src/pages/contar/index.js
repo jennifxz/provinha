@@ -1,7 +1,7 @@
 import './index.js'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { contar } from '../../services/index.js'
+import { minimor } from '../../services/index.js'
 
 export default function Contagem () {
     const [inicio, setInicio] = useState (0)
@@ -9,7 +9,7 @@ export default function Contagem () {
     const [result,setResult] = useState ([])
 
     function count(){
-        let x = contar(inicio, fim)
+        let x = minimor(inicio, fim)
         setResult(x);
     } 
 

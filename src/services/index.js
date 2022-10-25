@@ -227,7 +227,37 @@ function cafe(estudantes, litros, ml ) {
     }
 }
 
-let x = cafe(2, 1, 2000) 
-console.log(x)
 
-export { calcularGramas, seuSigno, calcularAcai, SalarioLiq, Paradas, Febre, Ingressos, Orcamento, minimor, linha, retangulo }
+
+
+function CalcularMedia(alunos, nota) {
+    let alunosArray = [];
+    let media = 0;
+    let menor = 10;
+    let maior = 0;
+    let valor = 0;
+    for(let i = 0; i < alunos; i++){
+        alunosArray.push([i, nota[i]]) 
+    }
+    for(let i = 0; i < alunos; i++){
+
+        valor = valor + nota[i];
+        media = valor / nota.length;
+    }
+
+    for (let i = 0; i < alunos; i++) {
+        if (maior < nota[i]) {
+            maior = nota[i];
+        }
+    }
+    for (let i = 0; i < alunos; i++) {
+        if (menor > nota[i]) {
+            menor = nota[i];
+        }
+    }
+
+
+    return ([alunosArray, Math.round(media), maior, menor]);
+}
+
+export { calcularGramas, seuSigno, calcularAcai, SalarioLiq, Paradas, Febre, Ingressos, Orcamento, minimor, linha, retangulo, CalcularMedia }
